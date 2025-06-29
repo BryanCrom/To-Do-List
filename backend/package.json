@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon main",
-    "start": "node main"
+    "start": "node main",
+    "install:dependencies": "npm i express && npm i -D nodemon && npm i dotenv && npm i mongoose && npm i @upstash/redis && @upstash/ratelimit"
   },
   "type": "module",
   "author": "Bryan Crombach",
@@ -13,9 +14,9 @@
   "dependencies": {
     "@upstash/ratelimit": "^2.0.5",
     "@upstash/redis": "^1.35.0",
-    "dotenv": "^16.5.0",
+    "dotenv": "^17.0.0",
     "express": "^5.1.0",
-    "mongoose": "^8.16.0"
+    "mongoose": "^8.16.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
