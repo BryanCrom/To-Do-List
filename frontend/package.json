@@ -8,7 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "install:dependencies": "npm i react-router && npm i react-chot-toast"
+    "install:dependencies": "npm install react-router react-hot-toast",
+    "install:devDependencies": "npm install -D tailwindcss@3 postcss autoprefixer daisyui@4.12.24",
+    "install:allDependencies": "npm run install:dependencies && npm run install:devDependencies",
+    "config:tailwind": "npx tailwindcss init -p"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -21,10 +24,14 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^4.12.24",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "vite": "^6.3.5"
   }
 }
