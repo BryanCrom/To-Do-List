@@ -8,12 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "install:dependencies": "npm install react-router react-hot-toast",
-    "install:devDependencies": "npm install -D tailwindcss@3 postcss autoprefixer daisyui@4.12.24",
+    "install:dependencies": "npm install react-router@7.6.2 react-hot-toast@2.5.2 lucide-react@0.525.0 axios@1.10.0",
+    "install:devDependencies": "npm install -D tailwindcss@3.4.17 postcss@8.5.6 autoprefixer@10.4.21 daisyui@4.12.24",
     "install:allDependencies": "npm run install:dependencies && npm run install:devDependencies",
     "config:tailwind": "npx tailwindcss init -p"
   },
   "dependencies": {
+    "axios": "^1.10.0",
+    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hot-toast": "^2.5.2",

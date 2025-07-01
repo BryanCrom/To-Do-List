@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon main",
     "start": "node main",
-    "install:dependencies": "npm i express && npm i -D nodemon && npm i dotenv && npm i mongoose && npm i @upstash/redis && @upstash/ratelimit"
+    "install:dependencies": "npm install express@5.1.0 dotenv@17.0.0 mongoose@8.16.1 @upstash/redis@1.35.0 @upstash/ratelimit@2.0.5",
+    "install:devDependencies": "npm install -D nodemon@3.1.10",
+    "install:allDependencies": "npm run install:dependencies && npm run install:devDependencies"
   },
   "type": "module",
   "author": "Bryan Crombach",
