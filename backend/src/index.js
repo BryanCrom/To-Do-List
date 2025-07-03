@@ -3,6 +3,7 @@ import notesRoutes from "./routes/notesRoutes.js";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import rateLimiter from "./middleware/rateLimiter.js";
+import cors from "cors";
 //import requestTracker from "./middleware/requestTracker.js";
 
 dotenv.config();
@@ -15,6 +16,13 @@ connectDB().then(() => {
     console.log("Backend started on PORT: " + PORT);
   });
 });
+
+//apply cors
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 //lets us use req.body
 app.use(express.json());
