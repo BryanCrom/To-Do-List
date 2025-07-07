@@ -1,5 +1,5 @@
 const NoteDetailPage = () => {
-  return <div>NoteDetailPage</div>;
+  return <div className="h-screen">NoteDetailPage</div>;
 };
 
 export default NoteDetailPage;

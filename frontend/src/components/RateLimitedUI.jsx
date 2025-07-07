@@ -15,7 +15,8 @@ const RateLimitedUI = () => {
               moment.
             </p>
             <p className="text-sm text-base-content/70">
-              Try again in a few seconds for the best experience.
+              Refresh the page and try again in a few seconds for the best
+              experience.
             </p>
           </div>
         </div>

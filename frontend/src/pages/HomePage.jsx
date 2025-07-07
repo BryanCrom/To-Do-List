@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../lib/axios.js";
 import toast from "react-hot-toast";
 
 import RateLimitedUI from "../components/RateLimitedUI";
@@ -14,13 +14,13 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:5123/notes");
+        const res = await api.get("/notes");
         console.log(res.data);
         setNotes(res.data);
         setIsRateLimted(false);
       } catch (error) {
         console.log("Error fetching notes.\n" + error);
-        if (error.response.status === 429) {
+        if (error.response?.status === 429) {
           setIsRateLimted(true);
         } else {
           toast.error("Error fetching notes");
