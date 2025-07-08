@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
 import NoteDetailPage from "./pages/NoteDetailPage.jsx";
 
+//custom background from bg.ibelick.com
 const App = () => {
   return (
     <div className="relative h-full w-full">

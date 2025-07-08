@@ -17,8 +17,6 @@ const CreatePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(title + " | " + description);
-
     if (!title.trim()) {
       toast.error("Title is required");
       return;
@@ -32,10 +30,9 @@ const CreatePage = () => {
       setIsRateLimited(false);
     } catch (error) {
       console.error("failed to create note\n" + error);
+      toast.error("Failed to create note");
       if (error.response?.status === 429) {
         setIsRateLimited(true);
-      } else {
-        toast.error("Failed to create note");
       }
     } finally {
       setIsLoading(false);
@@ -61,7 +58,7 @@ const CreatePage = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="Note Title"
+                    placeholder="Note title"
                     className="input input-bordered"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
